@@ -1,0 +1,21 @@
+<JointControlParam>
+  <Joint>
+    <Name>RootJoint</Name>
+    <kp>500</kp>
+    <kd>50</kd>
+    <TorqueLimit>500</TorqueLimit>
+    <Scale_X>1.0</Scale_X>
+    <Scale_Y>1.0</Scale_Y>
+    <Scale_Z>1.0</Scale_Z>
+  </Joint>
+
+  <Joint>
+    <Name>Joint12</Name>
+    <kp>500</kp>
+    <kd>50</kd>
+    <TorqueLimit>500</TorqueLimit>
+    <Scale_X>1.0</Scale_X>
+    <Scale_Y>1.0</Scale_Y>
+    <Scale_Z>1.0</Scale_Z>
+  </Joint>
+</JointControlParam>

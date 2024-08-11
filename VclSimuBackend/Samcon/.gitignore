@@ -1,0 +1,9 @@
+SamconUpdateSceneOld.py
+discarded
+backup
+*.bin
+*.prof
+*.out
+*.log
+debug_main.py
+policy_train.ckpt

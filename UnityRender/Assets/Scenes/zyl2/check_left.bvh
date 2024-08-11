@@ -1,0 +1,106 @@
+HIERARCHY
+ROOT RootJoint
+{
+    OFFSET   0.000000   0.000000   0.000000
+    CHANNELS 6 Xposition Yposition Zposition Xrotation Yrotation Zrotation
+    JOINT THUMB_CMC
+    {
+        OFFSET   0.041684   0.028514  -0.017617
+        CHANNELS 3 Xrotation Yrotation Zrotation
+        JOINT THUMB_MCP_FE
+        {
+            OFFSET   0.036474   0.000000   0.000000
+            CHANNELS 3 Xrotation Yrotation Zrotation
+            JOINT THUMB_IP_FE
+            {
+                OFFSET   0.037910   0.000000   0.000000
+                CHANNELS 3 Xrotation Yrotation Zrotation
+                End Site
+                {
+                    OFFSET   0.020000   0.000000   0.000000
+                }
+            }
+        }
+    }
+    JOINT INDEX_MCP
+    {
+        OFFSET   0.107691   0.026420  -0.001477
+        CHANNELS 3 Xrotation Yrotation Zrotation
+        JOINT INDEX_PIP_FE
+        {
+            OFFSET   0.042548   0.000000   0.000000
+            CHANNELS 3 Xrotation Yrotation Zrotation
+            JOINT INDEX_DIP_FE
+            {
+                OFFSET   0.027264   0.000000   0.000000
+                CHANNELS 3 Xrotation Yrotation Zrotation
+                End Site
+                {
+                    OFFSET   0.020000   0.000000   0.000000
+                }
+            }
+        }
+    }
+    JOINT MIDDLE_MCP
+    {
+        OFFSET   0.107299   0.001936   0.003878
+        CHANNELS 3 Xrotation Yrotation Zrotation
+        JOINT MIDDLE_PIP_FE
+        {
+            OFFSET   0.048157   0.000000   0.000000
+            CHANNELS 3 Xrotation Yrotation Zrotation
+            JOINT MIDDLE_DIP_FE
+            {
+                OFFSET   0.030906   0.000000   0.000000
+                CHANNELS 3 Xrotation Yrotation Zrotation
+                End Site
+                {
+                    OFFSET   0.020000   0.000000   0.000000
+                }
+            }
+        }
+    }
+    JOINT RING_MCP
+    {
+        OFFSET   0.099499  -0.019593  -0.000594
+        CHANNELS 3 Xrotation Yrotation Zrotation
+        JOINT RING_PIP_FE
+        {
+            OFFSET   0.043747   0.000000  -0.000000
+            CHANNELS 3 Xrotation Yrotation Zrotation
+            JOINT RING_DIP_FE
+            {
+                OFFSET   0.029811   0.000000   0.000000
+                CHANNELS 3 Xrotation Yrotation Zrotation
+                End Site
+                {
+                    OFFSET   0.020000   0.000000   0.000000
+                }
+            }
+        }
+    }
+    JOINT PINKY_MCP
+    {
+        OFFSET   0.087386  -0.039325  -0.008628
+        CHANNELS 3 Xrotation Yrotation Zrotation
+        JOINT PINKY_PIP_FE
+        {
+            OFFSET   0.034463   0.000000   0.000000
+            CHANNELS 3 Xrotation Yrotation Zrotation
+            JOINT PINKY_DIP_FE
+            {
+                OFFSET   0.022786   0.000000   0.000000
+                CHANNELS 3 Xrotation Yrotation Zrotation
+                End Site
+                {
+                    OFFSET   0.020000   0.000000   0.000000
+                }
+            }
+        }
+    }
+}
+MOTION
+Frames: 2
+Frame Time:   0.008333
+  0.0  2.0  0.0   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000
+  0.0  2.0  0.0   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000   0.000000

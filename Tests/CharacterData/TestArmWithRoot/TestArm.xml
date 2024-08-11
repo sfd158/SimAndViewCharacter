@@ -1,0 +1,90 @@
+<Character>
+    <IgnorePair>
+
+    </IgnorePair>
+
+    <Body>
+        <Type>Body</Type>
+        <Name>Arm1</Name>
+        <BodyFrame>
+            <Center>0.5 0 0</Center>
+            <X_Axis>1 0 0</X_Axis>
+            <Y_Axis>0 1 0</Y_Axis>
+            <Z_Axis>0 0 1</Z_Axis>
+        </BodyFrame>
+        <PhysicsProperty>
+            <FrictionCoef>0.8</FrictionCoef>
+            <RestitutionCoef>1</RestitutionCoef>
+            <Density>90.0</Density>
+        </PhysicsProperty>
+        <CollisionGeometry>
+            <Type>Box</Type>
+            <Name>CollisionGeometry_pelvis0</Name>
+            <BodyFrame>
+                <Center>0.5 0 0</Center>
+                <X_Axis>1 0 0</X_Axis>
+                <Y_Axis>0 1 0</Y_Axis>
+                <Z_Axis>0 0 1</Z_Axis>
+            </BodyFrame>
+            <XLength>1</XLength>
+            <YLength>0.5</YLength>
+            <ZLength>0.5</ZLength>
+        </CollisionGeometry>
+    </Body>
+
+    <Body>
+        <Type>Body</Type>
+        <Name>Arm2</Name>
+        <BodyFrame>
+            <Center>1.5 0 0</Center>
+            <X_Axis>1 0 0</X_Axis>
+            <Y_Axis>0 1 0</Y_Axis>
+            <Z_Axis>0 0 1</Z_Axis>
+        </BodyFrame>
+        <PhysicsProperty>
+            <FrictionCoef>0.8</FrictionCoef>
+            <RestitutionCoef>1</RestitutionCoef>
+            <Density>90.0</Density>
+        </PhysicsProperty>
+        <CollisionGeometry>
+            <Type>Box</Type>
+            <Name>CollisionGeometry_pelvis0</Name>
+            <BodyFrame>
+                <Center>1.5 0 0</Center>
+                <X_Axis>1 0 0</X_Axis>
+                <Y_Axis>0 1 0</Y_Axis>
+                <Z_Axis>0 0 1</Z_Axis>
+            </BodyFrame>
+            <XLength>1</XLength>
+            <YLength>0.5</YLength>
+            <ZLength>0.5</ZLength>
+        </CollisionGeometry>
+        <Parent>Arm1</Parent>
+    </Body>
+
+    <Joint>
+        <Type>BallJoint</Type>
+        <Name>RootJoint</Name>
+        <Position>0 0 0</Position>
+        <Parent>null</Parent>
+        <Child>Arm1</Child>
+        <AngleLimit>-180 180</AngleLimit>
+        <AngleLimit>-180 180</AngleLimit>
+        <AngleLimit>-180 180</AngleLimit>
+        <EulerOrder>ZXY</EulerOrder>
+    </Joint>
+
+    <Joint>
+        <Type>BallJoint</Type>
+        <Name>Joint12</Name>
+        <Position>1 0 0</Position>
+        <Parent>Arm1</Parent>
+        <Child>Arm2</Child>
+        <AngleLimit>-180 180</AngleLimit>
+        <AngleLimit>-180 180</AngleLimit>
+        <AngleLimit>-180 180</AngleLimit>
+        <EulerOrder>ZXY</EulerOrder>
+    </Joint>
+
+    <EndPoint>Arm2 2.8 0 0</EndPoint>
+</Character>

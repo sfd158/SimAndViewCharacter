@@ -1,0 +1,180 @@
+{
+  "WorldAttr": {
+    "Gravity": [0.0, -9.800000190734864, 0.0],
+    "StepCount": 0,
+    "RenderFPS": 60,
+    "SimulateFPS": 120,
+    "UseHinge": true,
+    "UseAngleLimit": true,
+    "SelfCollision": true
+  },
+  "Environment": {
+    "Geoms": [
+      {
+        "GeomID": 38410,
+        "Name": "Plane",
+        "GeomType": "Plane",
+        "Collidable": true,
+        "Friction": 0.800000011920929,
+        "Restitution": 1.0,
+        "ClungEnv": false,
+        "Position": [0.0, 0.0, 0.0],
+        "Quaternion": [0.0, 0.0, 0.0, 1.0],
+        "Scale": [200.0, 1.0, 200.0]
+      }
+    ],
+    "FloorGeomID": 0.0
+  },
+  "CharacterList": {
+    "Characters": [
+      {
+        "CharacterID": 38510,
+        "CharacterName": "DCharacter0",
+        "SelfCollision": true,
+        "IgnoreParentCollision": true,
+        "IgnoreGrandpaCollision": true,
+        "Kinematic": false,
+        "CharacterLabel": "",
+        "HasRealRootJoint": false,
+        "Bodies": [
+          {
+            "BodyID": 0,
+            "Name": "basebody",
+            "Density": 10.0,
+            "ParentJointID": -1,
+            "ParentBodyID": -1,
+            "Position": [0.0, 0.02500000037252903, 0.0],
+            "Quaternion": [0.0, 0.0, 0.0, 1.0],
+            "LinearVelocity": [0.0, 0.0, 0.0],
+            "AngularVelocity": [0.0, 0.0, 0.0],
+            "Geoms": [
+              {
+                "GeomID": 0,
+                "Name": "BaseCube",
+                "GeomType": "Cube",
+                "Collidable": true,
+                "Friction": 0.800000011920929,
+                "Restitution": 1.0,
+                "ClungEnv": false,
+                "Position": [0.0, 0.02500000037252903, 0.0],
+                "Quaternion": [0.0, 0.0, 0.0, 1.0],
+                "Scale": [
+                  0.20000000298023225, 0.05000000074505806, 0.20000000298023225
+                ]
+              }
+            ],
+            "IgnoreBodyID": []
+          },
+          {
+            "BodyID": 1,
+            "Name": "armbody0",
+            "Density": 10.0,
+            "ParentJointID": 0,
+            "ParentBodyID": 0,
+            "Position": [
+              0.013000000268220902, 0.12300000339746475, -0.03710000216960907
+            ],
+            "Quaternion": [0.0, 0.0, 0.0, 1.0],
+            "LinearVelocity": [0.0, 0.0, 0.0],
+            "AngularVelocity": [0.0, 0.0, 0.0],
+            "Geoms": [
+              {
+                "GeomID": 0,
+                "Name": "arm0",
+                "GeomType": "Capsule",
+                "Collidable": false,
+                "Friction": 0.800000011920929,
+                "Restitution": 1.0,
+                "ClungEnv": false,
+                "Position": [
+                  0.013000000268220902, 0.12300000339746475,
+                  -0.03710000216960907
+                ],
+                "Quaternion": [
+                  0.3826834261417389, 0.0, 0.0, 0.9238795638084412
+                ],
+                "Scale": [0.02500000037252903, 0.15000000596046449, 0.0]
+              }
+            ],
+            "IgnoreBodyID": []
+          },
+          {
+            "BodyID": 2,
+            "Name": "armbody1",
+            "Density": 10.0,
+            "ParentJointID": 1,
+            "ParentBodyID": 1,
+            "Position": [
+              0.013000000268220902, 0.27980002760887148, -0.06189998984336853
+            ],
+            "Quaternion": [0.0, 0.0, 0.0, 1.0],
+            "LinearVelocity": [0.0, 0.0, 0.0],
+            "AngularVelocity": [0.0, 0.0, 0.0],
+            "Geoms": [
+              {
+                "GeomID": 0,
+                "Name": "arm1",
+                "GeomType": "Capsule",
+                "Collidable": false,
+                "Friction": 0.800000011920929,
+                "Restitution": 1.0,
+                "ClungEnv": false,
+                "Position": [
+                  0.013000000268220902, 0.27980002760887148,
+                  -0.06189998984336853
+                ],
+                "Quaternion": [
+                  -0.3826834261417389, 0.0, 0.0, 0.9238795638084412
+                ],
+                "Scale": [0.02500000037252903, 0.15000000596046449, 0.0]
+              }
+            ],
+            "IgnoreBodyID": []
+          }
+        ],
+        "Joints": [
+          {
+            "JointID": 0,
+            "Name": "hinge0",
+            "JointType": "HingeJoint",
+            "Damping": 0.000699999975040555,
+            "Weight": 0.0,
+            "Position": [
+              0.013000000268220902, 0.06199999153614044, 0.023000000044703485
+            ],
+            "Quaternion": [0.0, 0.0, 0.0, 1.0],
+            "AngleLoLimit": [-180.0],
+            "AngleHiLimit": [180.0],
+            "EulerOrder": "X",
+            "EulerAxisLocalRot": [0.0, 0.0, 0.0, 1.0],
+            "ParentBodyID": 0,
+            "ChildBodyID": 1,
+            "ParentJointID": -1
+          },
+          {
+            "JointID": 1,
+            "Name": "hinge1",
+            "JointType": "HingeJoint",
+            "Damping": 0.0005000000237487257,
+            "Weight": 0.0,
+            "Position": [
+              0.013000000268220902, 0.2070000171661377, -0.10439999401569367
+            ],
+            "Quaternion": [0.0, 0.0, 0.0, 1.0],
+            "AngleLoLimit": [-180.0],
+            "AngleHiLimit": [180.0],
+            "EulerOrder": "X",
+            "EulerAxisLocalRot": [0.0, 0.0, 0.0, 1.0],
+            "ParentBodyID": 1,
+            "ChildBodyID": 2,
+            "ParentJointID": 0
+          }
+        ],
+        "EndJoints": [],
+        "PDControlParam": { "Kps": [], "TorqueLimit": [] }
+      }
+    ]
+  },
+  "ExtJointList": { "Joints": [] },
+  "ExtForceList": { "Forces": [] }
+}

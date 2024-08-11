@@ -1,0 +1,177 @@
+<mujoco model="stdhuman">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.01" gravity="0 -9.8 0"/>
+  <size nstack="1000000"/>
+  <visual>
+    <scale forcewidth="0.2"/>
+  </visual>
+  <default class="main">
+    <joint limited="false" damping="1"/>
+    <geom friction="0.8 0.005 0.0001" material="self"/>
+    <site size="0.01 0.005 0.005"/>
+    <general ctrllimited="true"/>
+  </default>
+  <asset>
+    <texture type="2d" name="texplane" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.1 0.15 0.2" width="512" height="512"/>
+    <material name="self" rgba="0.7 0.5 0.3 1"/>
+    <material name="MatPlane" texture="texplane" texuniform="true"/>
+  </asset>
+  <worldbody>
+    <geom name="floor" size="200 200 1" quat="0.707107 -0.707107 0 0" type="plane" material="MatPlane"/>
+    <camera name="FixedCamera" pos="-0.8 3 4" quat="0.94458 -0.311434 -0.103811 0"/>
+    <camera name="TargetCamera" target="pelvis" pos="-0.8 3 4" quat="0.94458 -0.311434 -0.103811 0" mode="trackcom"/>
+    <light target="pelvis" pos="0 4 0" dir="0 -1 0" directional="true" castshadow="false" diffuse="0.8 0.8 0.8" specular="0.1 0.1 0.1" mode="targetbodycom"/>
+    <body name="pelvis" pos="0 0.931 0" gravcomp="0">
+      <inertial pos="0 0 0" mass="4.032" diaginertia="0.0119 0.0349 0.0297"/>
+      <joint name="RootJoint" type="free" damping="0"/>
+      <geom name="Collision_pelvis0" size="0.06" pos="0.085 -0.031 0"/>
+      <geom name="Collision_pelvis1" size="0.09" pos="0 0.019 0"/>
+      <geom name="Collision_pelvis2" size="0.06" pos="-0.085 -0.031 0"/>
+      <body name="lowerBack" pos="0 0.149 0" gravcomp="0">
+        <inertial pos="0 0 0" mass="5.508" diaginertia="0.0198 0.0545 0.0479"/>
+        <joint name="pelvis_lowerback_z" pos="0 -0.055 0" axis="0 0 1" range="-180 180" armature="0.02" damping="5"/>
+        <joint name="pelvis_lowerback_y" pos="0 -0.055 0" axis="0 1 0" range="-180 180" armature="0.02" damping="5"/>
+        <joint name="pelvis_lowerback_x" pos="0 -0.055 0" axis="1 0 0" range="-180 180" armature="0.02" damping="5"/>
+        <geom name="Collision_lowerBack" size="0.07"/>
+        <body name="torso" pos="0 0.12 0" gravcomp="0">
+          <inertial pos="0 0 0" mass="6.426" diaginertia="0.0259 0.0636 0.0586"/>
+          <joint name="lowerback_torso_z" pos="0 -0.075 0" axis="0 0 1" range="-180 180" armature="0.02" damping="5"/>
+          <joint name="lowerback_torso_y" pos="0 -0.075 0" axis="0 1 0" range="-180 180" armature="0.02" damping="5"/>
+          <joint name="lowerback_torso_x" pos="0 -0.075 0" axis="1 0 0" range="-180 180" armature="0.02" damping="5"/>
+          <geom name="Collision_torso" size="0.1"/>
+          <body name="head" pos="0 0.28 0" gravcomp="0">
+            <joint name="torso_head_z" pos="0 -0.1 0" axis="0 0 1" range="-180 180"/>
+            <joint name="torso_head_y" pos="0 -0.1 0" axis="0 1 0" range="-180 180"/>
+            <joint name="torso_head_x" pos="0 -0.1 0" axis="1 0 0" range="-180 180"/>
+            <geom name="Collision_head" size="0.09 0.04" quat="0.707107 0.707107 0 0" type="capsule"/>
+            <site name="EndSite_head" pos="0 0.12 0"/>
+          </body>
+          <body name="rClavicle" pos="-0.07 0.0825 0" gravcomp="0">
+            <joint name="rTorso_Clavicle_z" pos="0.069 0 0" axis="0 0 1" range="-180 180" armature="0.0068"/>
+            <joint name="rTorso_Clavicle_y" pos="0.069 0 0" axis="0 1 0" range="-180 180" armature="0.0068"/>
+            <joint name="rTorso_Clavicle_x" pos="0.069 0 0" axis="1 0 0" range="-180 180" armature="0.0068"/>
+            <geom name="Collision_rClavicle" size="0.065 0.015" quat="0.707107 0 0.707107 0" type="capsule"/>
+            <body name="rUpperArm" pos="-0.171 0 0" gravcomp="0">
+              <joint name="rShoulder_z" pos="0.1224 0 0" axis="0 0 1" range="-180 180" armature="0.0051"/>
+              <joint name="rShoulder_y" pos="0.1224 0 0" axis="0 1 0" range="-180 180" armature="0.0051"/>
+              <joint name="rShoulder_x" pos="0.1224 0 0" axis="1 0 0" range="-180 180" armature="0.0051"/>
+              <geom name="Collision_rUpperArm" size="0.0475 0.075" quat="0.707107 0 0.707107 0" type="capsule"/>
+              <body name="rLowerArm" pos="-0.2376 0 0" gravcomp="0">
+                <joint name="rElbow" pos="0.115 0 0" axis="0 1 0" range="0 150" armature="0.0028"/>
+                <geom name="Collision_rLowerArm" size="0.045 0.07" quat="0.707107 0 -0.707107 0" type="capsule"/>
+                <geom name="Collision_rHand" size="0.04" pos="-0.1514 0 0"/>
+                <site name="EndSite_rHand" pos="-0.1914 -0.0025 0"/>
+              </body>
+            </body>
+          </body>
+          <body name="lClavicle" pos="0.07 0.0825 0" gravcomp="0">
+            <joint name="lTorso_Clavicle_z" pos="-0.069 0 0" axis="0 0 1" range="-180 180" armature="0.0068"/>
+            <joint name="lTorso_Clavicle_y" pos="-0.069 0 0" axis="0 1 0" range="-180 180" armature="0.0068"/>
+            <joint name="lTorso_Clavicle_x" pos="-0.069 0 0" axis="1 0 0" range="-180 180" armature="0.0068"/>
+            <geom name="Collision_lClavicle" size="0.065 0.015" quat="0.707107 0 -0.707107 0" type="capsule"/>
+            <body name="lUpperArm" pos="0.171 0 0" gravcomp="0">
+              <joint name="lShoulder_z" pos="-0.1224 0 0" axis="0 0 1" range="-180 180" armature="0.0051"/>
+              <joint name="lShoulder_y" pos="-0.1224 0 0" axis="0 1 0" range="-180 180" armature="0.0051"/>
+              <joint name="lShoulder_x" pos="-0.1224 0 0" axis="1 0 0" range="-180 180" armature="0.0051"/>
+              <geom name="Collision_lUpperArm" size="0.0475 0.075" quat="0.707107 0 -0.707107 0" type="capsule"/>
+              <body name="lLowerArm" pos="0.2376 0 0" gravcomp="0">
+                <joint name="lElbow" pos="-0.115 0 0" axis="0 1 0" range="-150 0" armature="0.0028"/>
+                <geom name="Collision_lLowerArm" size="0.045 0.07" quat="0.707107 0 0.707107 0" type="capsule"/>
+                <geom name="Collision_lHand" size="0.04" pos="0.1514 0 0"/>
+                <site name="EndSite_lHand" pos="0.1914 -0.0025 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="rUpperLeg" pos="-0.1 -0.256 0" gravcomp="0">
+        <joint name="rHip_z" pos="0 0.205 0" axis="0 0 1" range="-180 180" armature="0.01" damping="5"/>
+        <joint name="rHip_y" pos="0 0.205 0" axis="0 1 0" range="-180 180" armature="0.01" damping="5"/>
+        <joint name="rHip_x" pos="0 0.205 0" axis="1 0 0" range="-180 180" armature="0.01" damping="5"/>
+        <geom name="Collision_rUpperLeg" size="0.07 0.13" quat="0.707107 -0.707107 0 0" type="capsule"/>
+        <body name="rLowerLeg" pos="0 -0.4 0" gravcomp="0">
+          <joint name="rKnee" pos="0 0.195 0" axis="1 0 0" range="0 170" armature="0.006"/>
+          <geom name="Collision_rLowerLeg" size="0.06 0.13" quat="0.707107 -0.707107 0 0" type="capsule"/>
+          <body name="rFoot" pos="0 -0.233 0.017" gravcomp="0">
+            <joint name="rAnkle_z" pos="0 0.038 -0.017" axis="0 0 1" range="-180 180" armature="0.0008"/>
+            <joint name="rAnkle_y" pos="0 0.038 -0.017" axis="0 1 0" range="-180 180" armature="0.0008"/>
+            <joint name="rAnkle_x" pos="0 0.038 -0.017" axis="1 0 0" range="-180 180" armature="0.0008"/>
+            <geom name="Collision_rFoot0" size="0.0364" pos="0 0.003 -0.0485"/>
+            <geom name="Collision_rFoot1" size="0.021" pos="0.028 -0.011 0.094"/>
+            <geom name="Collision_rFoot2" size="0.021" pos="-0.028 -0.011 0.094"/>
+            <geom name="Collision_rFoot3" size="0.01638 0.0548664" pos="0 0.003 0.0224" quat="0.0492703 -0.998785 0 0" type="capsule"/>
+            <geom name="Collision_rToes" size="0.02 0.03" pos="0 -0.012 0.148" quat="0.707107 0 0.707107 0" type="capsule"/>
+            <site name="EndSite_rToe" pos="-0.01 -0.01 0.173"/>
+          </body>
+        </body>
+      </body>
+      <body name="lUpperLeg" pos="0.1 -0.256 0" gravcomp="0">
+        <joint name="lHip_z" pos="0 0.205 0" axis="0 0 1" range="-180 180" armature="0.01" damping="5"/>
+        <joint name="lHip_y" pos="0 0.205 0" axis="0 1 0" range="-180 180" armature="0.01" damping="5"/>
+        <joint name="lHip_x" pos="0 0.205 0" axis="1 0 0" range="-180 180" armature="0.01" damping="5"/>
+        <geom name="Collision_lUpperLeg" size="0.07 0.13" quat="0.707107 -0.707107 0 0" type="capsule"/>
+        <body name="lLowerLeg" pos="0 -0.4 0" gravcomp="0">
+          <joint name="lKnee" pos="0 0.195 0" axis="1 0 0" range="0 170" armature="0.006"/>
+          <geom name="Collision_lLowerLeg" size="0.06 0.13" quat="0.707107 -0.707107 0 0" type="capsule"/>
+          <body name="lFoot" pos="0 -0.233 0.017" gravcomp="0">
+            <joint name="lAnkle_z" pos="0 0.038 -0.017" axis="0 0 1" range="-180 180" armature="0.0008"/>
+            <joint name="lAnkle_y" pos="0 0.038 -0.017" axis="0 1 0" range="-180 180" armature="0.0008"/>
+            <joint name="lAnkle_x" pos="0 0.038 -0.017" axis="1 0 0" range="-180 180" armature="0.0008"/>
+            <geom name="Collision_lFoot0" size="0.0364" pos="0 0.003 -0.0485"/>
+            <geom name="Collision_lFoot1" size="0.021" pos="-0.028 -0.011 0.094"/>
+            <geom name="Collision_lFoot2" size="0.021" pos="0.028 -0.011 0.094"/>
+            <geom name="Collision_lFoot3" size="0.01638 0.0548664" pos="0 0.003 0.0224" quat="0.0492703 -0.998785 0 0" type="capsule"/>
+            <geom name="Collision_lToes" size="0.02 0.03" pos="0 -0.012 0.148" quat="0.707107 0 -0.707107 0" type="capsule"/>
+            <site name="EndSite_lToe" pos="0.01 -0.01 0.173"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <general name="pelvis_lowerback_z" joint="pelvis_lowerback_z" ctrlrange="-180 180" gear="260 0 0 0 0 0" actdim="0"/>
+    <general name="pelvis_lowerback_y" joint="pelvis_lowerback_y" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="pelvis_lowerback_x" joint="pelvis_lowerback_x" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="lowerback_torso_z" joint="lowerback_torso_z" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="lowerback_torso_y" joint="lowerback_torso_y" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="lowerback_torso_x" joint="lowerback_torso_x" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="torso_head_z" joint="torso_head_z" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="torso_head_y" joint="torso_head_y" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="torso_head_x" joint="torso_head_x" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="rTorso_Clavicle_z" joint="rTorso_Clavicle_z" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rTorso_Clavicle_y" joint="rTorso_Clavicle_y" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rTorso_Clavicle_x" joint="rTorso_Clavicle_x" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rShoulder_z" joint="rShoulder_z" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rShoulder_y" joint="rShoulder_y" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rShoulder_x" joint="rShoulder_x" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="rElbow" joint="rElbow" ctrlrange="-180 180" gear="100 0 0 0 0 0" actdim="0"/>
+    <general name="lTorso_Clavicle_z" joint="lTorso_Clavicle_z" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lTorso_Clavicle_y" joint="lTorso_Clavicle_y" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lTorso_Clavicle_x" joint="lTorso_Clavicle_x" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lShoulder_z" joint="lShoulder_z" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lShoulder_y" joint="lShoulder_y" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lShoulder_x" joint="lShoulder_x" ctrlrange="-180 180" gear="110 0 0 0 0 0" actdim="0"/>
+    <general name="lElbow" joint="lElbow" ctrlrange="-180 180" gear="100 0 0 0 0 0" actdim="0"/>
+    <general name="rHip_z" joint="rHip_z" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="rHip_y" joint="rHip_y" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="rHip_x" joint="rHip_x" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="rKnee" joint="rKnee" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="rAnkle_z" joint="rAnkle_z" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="rAnkle_y" joint="rAnkle_y" ctrlrange="-180 180" gear="60 0 0 0 0 0" actdim="0"/>
+    <general name="rAnkle_x" joint="rAnkle_x" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="lHip_z" joint="lHip_z" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="lHip_y" joint="lHip_y" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="lHip_x" joint="lHip_x" ctrlrange="-180 180" gear="280 0 0 0 0 0" actdim="0"/>
+    <general name="lKnee" joint="lKnee" ctrlrange="-180 180" gear="200 0 0 0 0 0" actdim="0"/>
+    <general name="lAnkle_z" joint="lAnkle_z" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+    <general name="lAnkle_y" joint="lAnkle_y" ctrlrange="-180 180" gear="60 0 0 0 0 0" actdim="0"/>
+    <general name="lAnkle_x" joint="lAnkle_x" ctrlrange="-180 180" gear="30 0 0 0 0 0" actdim="0"/>
+  </actuator>
+  <sensor>
+    <touch site="EndSite_head" name="sensor_head"/>
+    <touch site="EndSite_rHand" name="sensor_rHand"/>
+    <touch site="EndSite_lHand" name="sensor_lHand"/>
+    <touch site="EndSite_rToe" name="sensor_rToe"/>
+    <touch site="EndSite_lToe" name="sensor_lToe"/>
+  </sensor>
+</mujoco>

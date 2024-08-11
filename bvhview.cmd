@@ -1,0 +1,1 @@
+@python -m VclSimuBackend.pymotionlib.editor --bvh_fname %1 %2

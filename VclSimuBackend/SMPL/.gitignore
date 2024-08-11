@@ -1,0 +1,5 @@
+*.pkl
+*.obj
+__pycache__/
+script.py
+official_model/

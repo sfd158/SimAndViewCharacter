@@ -1,0 +1,11 @@
+build
+cmake-build-debug
+cmake-build-release
+dist
+pyphysx.egg-info
+.pytest_cache
+.idea
+.eggs
+.github
+*.pyd
+.vscode

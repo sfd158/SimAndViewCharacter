@@ -1,0 +1,33 @@
+ \documentclass{article}
+ \usepackage{ctex}
+ \usepackage{amsmath}
+ \title{一些公式推导}
+ \begin{document}
+ 	\maketitle
+ 	
+ 	\section{ODE碰撞模型}
+ 	在ODE里, 简化的LCP方程如下:
+ 	\begin{equation}
+ 		\begin{aligned}
+ 		A \lambda &= b + w \\
+ 		s.t. \ \ \lambda_n &\geq 0 \\
+ 		-F_{max} \leq \lambda_f &\leq F_{max}
+ 		\end{aligned}
+ 	\end{equation}
+ 
+ 	如果某一维$CFM_r \to +\infty$, 那么这一维求解数值$\lambda_r = 0$. 
+ 	把矩阵乘法展开, $A_{rr}$只在矩阵的第$r$行存在, $A_{r1} x_1 + \cdots + A_{rr}x_{r} + \cdots + A_{rN} x_{N} = b_{r}$. 这里令$x_r = 0$. 在求解剩余变量的时候, 可以把$A$矩阵的第$r$行和第$j$列删掉, 然后给$w_r$一个非0的值.
+ 	
+ 	或者只把矩阵的第$r$列删掉(关于$x_r$的部分), 求解一个超定方程.
+ 	这里超定方程就只能转化成一个带约束的优化问题, 进行求解了.
+ 	
+ 	关于CFM的导数: (先不考虑LCP的约束..) 对于线性方程, $A x = b, A = A_0 + \epsilon$
+
+	\begin{equation}
+		\frac{\partial L}{\partial A} = -A^{-1} \frac{\partial L}{\partial x} x^T, \frac{\partial L}{\partial \epsilon} = diag(\frac{\partial L}{\partial A}) = - (A^{-1} \frac{\partial L}{\partial x}) \otimes x
+	\end{equation}
+
+	\section{PPO和Samcon采样结合}
+	这相当于算或是状态转移的时候, 某一个小范围内的action, 带来的影响是相近的..
+	我觉得这相当于改变了reward的形状, 就是reward的局部最优解的范围变大了, reward没那么崎岖了.
+ \end{document}

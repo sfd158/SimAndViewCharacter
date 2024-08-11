@@ -1,0 +1,1 @@
+If you are using MacOS or Linux system, please compile library file by `src/CMakeLists.txt`

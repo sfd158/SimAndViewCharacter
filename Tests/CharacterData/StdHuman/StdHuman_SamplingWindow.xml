@@ -1,0 +1,102 @@
+<JointControlParam>
+  <Joint>
+    <Name>pelvis_lowerback</Name>
+    <SampleWindow>0.2 0.2 0.2</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lowerback_torso</Name>
+    <SampleWindow>0.1 0.1 0.1</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rHip</Name>
+    <SampleWindow>0.4 0.4 0.1</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lHip</Name>
+    <SampleWindow>0.4 0.4 0.1</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rKnee</Name>
+    <SampleWindow>0.2</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lKnee</Name>
+    <SampleWindow>0.2</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rAnkle</Name>
+    <SampleWindow>0.4 0.2 0.1</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lAnkle</Name>
+    <SampleWindow>0.4 0.2 0.1</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rToeJoint</Name>
+    <SampleWindow>0.15</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lToeJoint</Name>
+    <SampleWindow>0.15</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>torso_head</Name>
+    <SampleWindow>0.15 0.15 0.15</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lTorso_Clavicle</Name>
+    <SampleWindow>0.15 0.15 0.15</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rTorso_Clavicle</Name>
+    <SampleWindow>0.15 0.15 0.15</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rShoulder</Name>
+    <SampleWindow>0.2 0.2 0.2</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lShoulder</Name>
+    <SampleWindow>0.2 0.2 0.2</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rElbow</Name>
+    <SampleWindow>0.0</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lElbow</Name>
+    <SampleWindow>0.0</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>rWrist</Name>
+    <SampleWindow>0.0 0.0 0.0</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>lWrist</Name>
+    <SampleWindow>0.0 0.0 0.0</SampleWindow>
+  </Joint>
+
+  <Joint>
+    <Name>RootJoint</Name>
+    <SampleWindow>0.15 0.15 0.15</SampleWindow>
+  </Joint>
+
+</JointControlParam>

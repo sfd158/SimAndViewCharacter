@@ -1,0 +1,22 @@
+backup
+cmu-mocap-master
+cmu-mocap-modify
+Human3.6
+Samcon*
+JointParam.txt
+FBX 2013
+test-direct-traj-opt
+sfu/0005_2FeetJump001-mocap.bvh
+sfu/0007_Cartwheel001-mocap.bvh
+sfu/0017_ParkourRoll001-mocap.bvh
+save-paths
+main-worker.bin*
+clean.cmd
+Samcon*
+Human3.6
+Human36Retarget
+Human36Reheight
+
+lafan-raw
+lafan-mocap-100
+sfu

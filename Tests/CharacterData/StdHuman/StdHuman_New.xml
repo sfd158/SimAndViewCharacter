@@ -1,0 +1,970 @@
+<Character>
+  <IgnorePair>
+    <Pair>lClavicle rClavicle</Pair>
+    <Pair>lClavicle head</Pair>
+    <Pair>rClavicle head</Pair>
+  </IgnorePair>
+  <Body>
+    <Id>0</Id>
+    <Type>Body</Type>
+    <Name>pelvis</Name>
+    <BodyFrame>
+      <Center>0 0.93 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>900.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Id>0</Id>
+      <Type>Sphere</Type>
+      <Name>CollisionGeometry_pelvis0</Name>
+      <BodyFrame>
+        <Center>0.085 0.90 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+    </CollisionGeometry>
+    <CollisionGeometry>
+      <Id>1</Id>
+      <Type>Sphere</Type>
+      <Name>CollisionGeometry_pelvis1</Name>
+      <BodyFrame>
+        <Center>0 0.95 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.09</Radius>
+    </CollisionGeometry>
+    <CollisionGeometry>
+      <Id>2</Id>
+      <Type>Sphere</Type>
+      <Name>CollisionGeometry_pelvis2</Name>
+      <BodyFrame>
+        <Center>-0.085 0.90 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+    </CollisionGeometry>
+    <InertiaGeometry>
+      <Type>Box</Type>
+      <Name>InertiaGeometry_pelvis</Name>
+      <BodyFrame>
+        <Center>0 0.93 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.28</XLength>
+      <YLength>0.1</YLength>
+      <ZLength>0.16</ZLength>
+    </InertiaGeometry>  
+  </Body>
+
+  <Body>
+    <Id>1</Id>
+    <Type>Body</Type>
+    <Name>lowerBack</Name>
+    <BodyFrame>
+      <Center>0 1.08 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>900.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>Sphere</Type>
+      <Name>RenderGeometry_lowerBack</Name>
+      <BodyFrame>
+        <Center>0 1.08 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>Sphere</Type>
+      <Name>CollisionGeometry_lowerBack</Name>
+      <BodyFrame>
+        <Center>0 1.08 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+    </CollisionGeometry>
+    <InertiaGeometry>
+      <Type>Box</Type>
+      <Name>InertiaGeometry_lowerBack</Name>
+      <BodyFrame>
+        <Center>0 1.08 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.3</XLength>
+      <YLength>0.12</YLength>
+      <ZLength>0.17</ZLength>
+    </InertiaGeometry>
+    <Parent>pelvis</Parent>
+  </Body>
+  
+  <Body>
+    <Id>2</Id>
+    <Type>Body</Type>
+    <Name>torso</Name>
+    <BodyFrame>
+      <Center>0 1.2 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>900.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>Sphere</Type>
+      <Name>RenderGeometry_torso</Name>
+      <BodyFrame>
+        <Center>0 1.2 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.1</Radius>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>Sphere</Type>
+      <Name>CollisionGeometry_torso</Name>
+      <BodyFrame>
+        <Center>0 1.2 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <Radius>0.1</Radius>
+    </CollisionGeometry>
+    <InertiaGeometry>
+      <Type>Box</Type>
+      <Name>InertiaMassGeometryTrunk</Name>
+      <BodyFrame>
+        <Center>0 1.2 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.3</XLength>
+      <YLength>0.14</YLength>
+      <ZLength>0.17</ZLength>
+    </InertiaGeometry>
+    <Parent>lowerBack</Parent>
+  </Body>
+
+  <Body>
+    <Id>3</Id>
+    <Type>Body</Type>
+    <Name>rUpperLeg</Name>
+    <BodyFrame>
+      <Center>-0.1 0.675 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>CCylinder</Type>
+      <Name>RenderGeometry_rUpperLeg</Name>
+      <BodyFrame>
+        <Center>-0.1 0.675 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+      <Length>0.26</Length>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_rUpperLeg</Name>
+      <BodyFrame>
+        <Center>-0.1 0.675 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+      <Length>0.26</Length>
+    </CollisionGeometry>
+    <Parent>pelvis</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>4</Id>
+    <Type>Body</Type>
+    <Name>lUpperLeg</Name>
+    <BodyFrame>
+      <Center>0.1 0.675 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>CCylinder</Type>
+      <Name>RenderGeometry_lUpperLeg</Name>
+      <BodyFrame>
+        <Center>0.1 0.675 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+      <Length>0.26</Length>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_lUpperLeg</Name>
+      <BodyFrame>
+        <Center>0.1 0.675 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.07</Radius>
+      <Length>0.26</Length>
+    </CollisionGeometry>
+    <Parent>pelvis</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>5</Id>
+    <Type>Body</Type>
+    <Name>rLowerLeg</Name>
+    <BodyFrame>
+      <Center>-0.1 0.275 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>CCylinder</Type>
+      <Name>RenderGeometry_rLowerLeg</Name>
+      <BodyFrame>
+        <Center>-0.1 0.275 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+      <Length>0.26</Length>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_rLowerLeg</Name>
+      <BodyFrame>
+        <Center>-0.1 0.275 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+      <Length>0.26</Length>
+    </CollisionGeometry>
+    <Parent>rUpperLeg</Parent>    
+  </Body>
+    
+  <Body>
+    <Id>6</Id>
+    <Type>Body</Type>
+    <Name>lLowerLeg</Name>
+    <BodyFrame>
+      <Center>0.1 0.275 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>CCylinder</Type>
+      <Name>RenderGeometry_lLowerLeg</Name>
+      <BodyFrame>
+        <Center>0.1 0.275 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+      <Length>0.26</Length>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_lLowerLeg</Name>
+      <BodyFrame>
+        <Center>0.1 0.275 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.06</Radius>
+      <Length>0.26</Length>
+    </CollisionGeometry>
+    <Parent>lUpperLeg</Parent> 
+  </Body>
+  
+  <Body>
+    <Id>7</Id>
+    <Type>Body</Type>
+    <Name>rFoot</Name>
+    <BodyFrame>
+      <Center>-0.1 0.045 0.06</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_rFoot</Name>
+      <BodyFrame>
+        <Center>-0.1 0.045 0.035</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.08</XLength>
+      <YLength>0.07</YLength>
+      <ZLength>0.19</ZLength>
+    </CollisionGeometry>
+    <Parent>rLowerLeg</Parent>
+  </Body>
+  
+  <Body>
+    <Id>8</Id>
+    <Type>Body</Type>
+    <Name>lFoot</Name>
+    <BodyFrame>
+      <Center>0.1 0.045 0.06</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_rFoot</Name>
+      <BodyFrame>
+        <Center>0.1 0.045 0.035</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.08</XLength>
+      <YLength>0.07</YLength>
+      <ZLength>0.19</ZLength>
+    </CollisionGeometry>
+    <Parent>lLowerLeg</Parent>
+    <Density>1000.0</Density>
+  </Body>
+
+  <Body>
+    <Id>9</Id>
+    <Type>Body</Type>
+    <Name>rToes</Name>
+    <BodyFrame>
+      <Center>-0.1 0.03 0.155</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_rToes</Name>
+      <BodyFrame>
+        <Center>-0.1 0.03 0.155</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.08</XLength>
+      <YLength>0.04</YLength>
+      <ZLength>0.05</ZLength>
+    </CollisionGeometry>
+    <Parent>rFoot</Parent>
+  </Body>
+  
+  <Body>
+    <Id>10</Id>
+    <Type>Body</Type>
+    <Name>lToes</Name>
+    <BodyFrame>
+      <Center>0.1 0.03 0.155</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_rToes</Name>
+      <BodyFrame>
+        <Center>0.1 0.03 0.155</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XLength>0.08</XLength>
+      <YLength>0.04</YLength>
+      <ZLength>0.05</ZLength>
+    </CollisionGeometry>
+    <Parent>lFoot</Parent>
+    <Density>1000.0</Density>
+  </Body>
+  
+  <Body>
+    <Id>11</Id>
+    <Type>Body</Type>
+    <Name>head</Name>
+    <BodyFrame>
+      <Center>0 1.48 0</Center>
+      <X_Axis>1 0 0</X_Axis>
+      <Y_Axis>0 1 0</Y_Axis>
+      <Z_Axis>0 0 1</Z_Axis>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>900.0</Density>
+    </PhysicsProperty>
+    <RenderGeometry>
+      <Type>Ellipsoid</Type>
+      <Name>RenderGeometry_head</Name>
+      <BodyFrame>
+        <Center>0 1.48 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 1 0</Y_Axis>
+        <Z_Axis>0 0 1</Z_Axis>
+      </BodyFrame>
+      <XRadius>0.1</XRadius>
+      <YRadius>0.13</YRadius>
+      <ZRadius>0.1</ZRadius>
+    </RenderGeometry>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_head</Name>
+      <BodyFrame>
+        <Center>0 1.48 0</Center>
+        <X_Axis>1 0 0</X_Axis>
+        <Y_Axis>0 0 1</Y_Axis>
+        <Z_Axis>0 -1 0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.09</Radius>
+      <Length>0.08</Length>
+    </CollisionGeometry>
+    <Parent>torso</Parent>
+  </Body>
+  
+  <Body>
+    <Id>12</Id>
+    <Type>Body</Type>
+    <Name>rClavicle</Name>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_rClavicle</Name>
+      <BodyFrame>
+        <Center>-0.07 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.065</Radius>  <!-- TotalLength = 2 * Radius + Length -->
+      <Length>0.03</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>-0.0976 1.2825 0.0</Center>
+    </BodyFrame>
+    <Parent>torso</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>13</Id>
+    <Type>Body</Type>
+    <Name>lClavicle</Name>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_lClavicle</Name>
+      <BodyFrame>
+        <Center>0.07 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.065</Radius>
+      <Length>0.03</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>0.0976 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>torso</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>14</Id>
+    <Type>Body</Type>
+    <Name>rUpperArm</Name>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_rUpperArm</Name>
+      <BodyFrame>
+        <Center>-0.241147 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.0475</Radius>
+      <Length>0.15</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>-0.236294 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>rClavicle</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>15</Id>
+    <Type>Body</Type>
+    <Name>lUpperArm</Name>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_lUpperArm</Name>
+      <BodyFrame>
+        <Center>0.241147 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.0475</Radius>
+      <Length>0.15</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>0.236294 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>lClavicle</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>16</Id>
+    <Type>Body</Type>
+    <Name>rLowerArm</Name>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_rLowerArm</Name>
+      <BodyFrame>
+        <Center>-0.478647 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.045</Radius>
+      <Length>0.14</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>-0.4292 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>rUpperArm</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>17</Id>
+    <Type>Body</Type>
+    <Name>lLowerArm</Name>
+    <CollisionGeometry>
+      <Type>CCylinder</Type>
+      <Name>CollisionGeometry_lLowerArm</Name>
+      <BodyFrame>
+        <Center>0.478647 1.2825 0.0</Center>
+        <X_Axis>0.0 0.0 -1.0</X_Axis>
+        <Y_Axis>0.0 1.0 0.0</Y_Axis>
+        <Z_Axis>1.0 0.0 0.0</Z_Axis>
+      </BodyFrame>
+      <Radius>0.045</Radius>
+      <Length>0.14</Length>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>0.4292 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>lUpperArm</Parent>    
+  </Body>
+  
+  <Body>
+    <Id>18</Id>
+    <Type>Body</Type>
+    <Name>rHand</Name>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_rHand</Name>
+      <BodyFrame>
+        <Center>-0.66 1.2825 0.0</Center>
+      </BodyFrame>
+      <XLength>0.16</XLength>
+      <YLength>0.03</YLength>
+      <ZLength>0.08</ZLength>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>-0.66 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>rLowerArm</Parent>
+  </Body>
+
+  <Body>
+    <Id>19</Id>
+    <Type>Body</Type>
+    <Name>lHand</Name>
+    <CollisionGeometry>
+      <Type>Box</Type>
+      <Name>CollisionGeometry_lHand</Name>
+      <BodyFrame>
+        <Center>0.66 1.2825 0.0</Center>
+      </BodyFrame>
+      <XLength>0.16</XLength>
+      <YLength>0.03</YLength>
+      <ZLength>0.08</ZLength>
+    </CollisionGeometry>
+    <BodyFrame>
+      <Center>0.66 1.2825 0.0</Center>
+    </BodyFrame>
+    <PhysicsProperty>
+      <FrictionCoef>0.8</FrictionCoef>
+      <RestitutionCoef>1</RestitutionCoef>
+      <Density>1000.0</Density>
+    </PhysicsProperty>
+    <Parent>lLowerArm</Parent>    
+  </Body>
+  
+  
+  <Joint>
+    <Id>0</Id>
+    <Type>BallJoint</Type>
+    <Name>pelvis_lowerback</Name>
+    <Position>0 1.025 0</Position>
+    <Parent>pelvis</Parent>
+    <Child>lowerBack</Child>
+    <AngleLimit>-120 120</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+  
+  <Joint>
+    <Id>1</Id>
+    <Type>BallJoint</Type>
+    <Name>lowerback_torso</Name>
+    <Position>0 1.125 0</Position>
+    <Parent>lowerBack</Parent>
+    <Child>torso</Child>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+  
+  <Joint>
+    <Id>2</Id>
+    <Type>BallJoint</Type>
+    <Name>rHip</Name>
+    <Position>-0.1 0.88 0</Position>
+    <Parent>pelvis</Parent>
+    <Child>rUpperLeg</Child>
+    <AngleLimit>-150 140</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-170 80</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>3</Id>
+    <Type>BallJoint</Type>
+    <Name>lHip</Name>
+    <Position>0.1 0.88 0</Position>
+    <Parent>pelvis</Parent>
+    <Child>lUpperLeg</Child>
+    <AngleLimit>-150 140</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 170</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>4</Id>
+    <Type>HingeJoint</Type>
+    <Name>rKnee</Name>
+    <Position>-0.1 0.47 0</Position>
+    <Parent>rUpperLeg</Parent>
+    <Child>rLowerLeg</Child>
+    <AngleLimit>0 170</AngleLimit>
+    <HingeAxis>X</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>5</Id>
+    <Type>HingeJoint</Type>
+    <Name>lKnee</Name>
+    <Position>0.1 0.47 0</Position>
+    <Parent>lUpperLeg</Parent>
+    <Child>lLowerLeg</Child>
+    <AngleLimit>0 170</AngleLimit>
+    <HingeAxis>X</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>6</Id>
+    <Type>BallJoint</Type>
+    <Name>rAnkle</Name>
+    <Position>-0.1 0.08 0</Position>
+    <Parent>rLowerLeg</Parent>
+    <Child>rFoot</Child>
+    <AngleLimit>-70 90</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-30 30</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>7</Id>
+    <Type>BallJoint</Type>
+    <Name>lAnkle</Name>
+    <Position>0.1 0.08 0</Position>
+    <Parent>lLowerLeg</Parent>
+    <Child>lFoot</Child>
+    <AngleLimit>-70 90</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-30 30</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>8</Id>
+    <Type>HingeJoint</Type>
+    <Name>rToeJoint</Name>
+    <Position>-0.1 0.03 0.13</Position>
+    <Parent>rFoot</Parent>
+    <Child>rToes</Child>
+    <AngleLimit>-45 10</AngleLimit>
+    <HingeAxis>X</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>9</Id>
+    <Type>HingeJoint</Type>
+    <Name>lToeJoint</Name>
+    <Position>0.1 0.03 0.13</Position>
+    <Parent>lFoot</Parent>
+    <Child>lToes</Child>
+    <AngleLimit>-45 10</AngleLimit>
+    <HingeAxis>X</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>10</Id>
+    <Type>BallJoint</Type>
+    <Name>torso_head</Name>
+    <Position>0 1.40735 0</Position>
+    <Parent>torso</Parent>
+    <Child>head</Child>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>11</Id>
+    <Type>BallJoint</Type>
+    <Name>rTorso_Clavicle</Name>
+    <Position>-0.001 1.2825 0</Position>
+    <Parent>torso</Parent>
+    <Child>rClavicle</Child>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <EulerOrder>ZXY</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>12</Id>
+    <Type>BallJoint</Type>
+    <Name>lTorso_Clavicle</Name>
+    <Position>0.001 1.2825 0</Position>
+    <Parent>torso</Parent>
+    <Child>lClavicle</Child>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <AngleLimit>-45 45</AngleLimit>
+    <EulerOrder>ZXY</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>13</Id>
+    <Type>BallJoint</Type>
+    <Name>rShoulder</Name>
+    <Position>-0.118647 1.2825 0</Position>
+    <Parent>rClavicle</Parent>
+    <Child>rUpperArm</Child>
+    <AngleLimit>-170 170</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-170 170</AngleLimit>
+    <EulerOrder>ZXY</EulerOrder>
+  </Joint>
+
+  <Joint>
+    <Id>14</Id>
+    <Type>BallJoint</Type>
+    <Name>lShoulder</Name>
+    <Position>0.118647 1.2825 0</Position>
+    <Parent>lClavicle</Parent>
+    <Child>lUpperArm</Child>
+    <AngleLimit>-170 170</AngleLimit>
+    <AngleLimit>-80 80</AngleLimit>
+    <AngleLimit>-170 170</AngleLimit>
+    <EulerOrder>ZXY</EulerOrder>
+  </Joint>
+  
+  <Joint>
+    <Id>15</Id>
+    <Type>HingeJoint</Type>
+    <Name>rElbow</Name>
+    <Position>-0.363647 1.2825 0.0</Position>
+    <Parent>rUpperArm</Parent>
+    <Child>rLowerArm</Child>
+    <AngleLimit>-0 150</AngleLimit>
+    <HingeAxis>Y</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>16</Id>
+    <Type>HingeJoint</Type>
+    <Name>lElbow</Name>
+    <Parent>lUpperArm</Parent>
+    <Child>lLowerArm</Child>
+    <Position>0.363647 1.2825 0.0</Position>
+    <AngleLimit>-150 0</AngleLimit>
+    <HingeAxis>Y</HingeAxis>
+  </Joint>
+
+  <Joint>
+    <Id>17</Id>
+    <Type>BallJoint</Type>
+    <Name>rWrist</Name>
+    <Parent>rLowerArm</Parent>
+    <Child>rHand</Child>
+    <Position>-0.603647 1.2825 0.0</Position>
+    <AngleLimit>-10 90</AngleLimit>
+    <AngleLimit>-10 10</AngleLimit>
+    <AngleLimit>-90 90</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+  
+  <Joint>
+    <Id>18</Id>
+    <Type>BallJoint</Type>
+    <Name>lWrist</Name>
+    <Parent>lLowerArm</Parent>
+    <Child>lHand</Child>
+    <Position>0.603647 1.2825 0.0</Position>
+    <AngleLimit>-90 10</AngleLimit>
+    <AngleLimit>-10 10</AngleLimit>
+    <AngleLimit>-90 90</AngleLimit>
+    <EulerOrder>XYZ</EulerOrder>
+  </Joint>
+  
+  
+  <EndPoint>rToes -0.11 0.032 0.19</EndPoint>
+  <EndPoint>lToes 0.11 0.032 0.19</EndPoint>
+  <EndPoint>rHand -0.72 1.28 0.00</EndPoint>
+  <EndPoint>lHand 0.72 1.28 0.00</EndPoint>
+  <EndPoint>head 0 1.60 0</EndPoint>
+</Character>

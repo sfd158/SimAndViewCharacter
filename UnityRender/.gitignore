@@ -1,0 +1,12 @@
+Library
+Logs
+backup
+Temp
+obj
+Assembly-CSharp.csproj
+unity-ode.sln
+*.csproj
+.vs
+.vsconfig
+backup
+Recordings

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model='stdhuman'>
+    <compiler coordinate='global' angle='degree'/>
+    <option timestep='0.01' gravity='0 -9.8 0' collision="predefined" integrator="Euler">
+    </option>
+    <size nstack="1000000"/>
+    <asset>
+        <material name="self" rgba=".7 .5 .3 1"/>
+        <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512"/>
+        <material name='MatPlane' reflectance='0.0' texture="texplane" texrepeat="1 1" texuniform="true"/>
+    </asset>
+    <default>
+        <joint limited='false' damping='1' armature='0'/>
+        <geom material="self" condim="3" friction="0.8" />
+        <motor ctrllimited='true'/>
+        <site size='0.01'/>
+    </default>
+    <visual>
+        <scale forcewidth='0.2'/>
+    </visual>
+    <contact>
+        <exclude body1='rClavicle' body2='lClavicle'/>
+        <exclude body1='head' body2='rClavicle'/>
+        <exclude body1='head' body2='lClavicle'/>
+        <exclude body1='torso' body2='rUpperArm'/>
+        <exclude body1='torso' body2='lUpperArm'/>
+        <pair geom1='Collision_lFoot0' geom2='floor'/>
+        <pair geom1='Collision_lFoot1' geom2='floor'/>
+        <pair geom1='Collision_rFoot0' geom2='floor'/>
+        <pair geom1='Collision_rFoot1' geom2='floor'/>
+        <pair geom1='Collision_lFoot2' geom2='floor'/>
+        <pair geom1='Collision_lFoot3' geom2='floor'/>
+        <pair geom1='Collision_rFoot2' geom2='floor'/>
+        <pair geom1='Collision_rFoot3' geom2='floor'/>
+        <pair geom1='Collision_lToes' geom2='floor'/>
+        <pair geom1='Collision_rToes' geom2='floor'/>
+    </contact>
+    <actuator>
+        <motor name='pelvis_lowerback_x' joint='pelvis_lowerback_x' gear='260' ctrlrange='-50 50'/>  <!-- 1 -->
+        <motor name='pelvis_lowerback_y' joint='pelvis_lowerback_y' gear='200' ctrlrange='-50 50'/>  <!-- 1 -->
+        <motor name='pelvis_lowerback_z' joint='pelvis_lowerback_z' gear='200' ctrlrange='-50 50'/>  <!-- 2 -->
+        <motor name='lowerback_torso_x' joint='lowerback_torso_x' gear='200' ctrlrange='-50 50'/>  <!-- 3 -->
+        <motor name='lowerback_torso_y' joint='lowerback_torso_y' gear='200' ctrlrange='-100 100'/>  <!-- 4 -->
+        <motor name='lowerback_torso_z' joint='lowerback_torso_z' gear='200' ctrlrange='-100 100'/>  <!-- 5 -->
+        <motor name='torso_head_x' joint='torso_head_x' gear='30'  ctrlrange='-10 10'/>  <!-- 6 -->
+        <motor name='torso_head_y' joint='torso_head_y' gear='30' ctrlrange='-10 10'/>  <!-- 7 -->
+        <motor name='torso_head_z' joint='torso_head_z' gear='30' ctrlrange='-10 10'/>  <!-- 8 -->
+        <motor name='rTorso_Clavicle_z' joint='rTorso_Clavicle_z' gear='110' ctrlrange='-50 50'/>  <!-- 9 -->
+        <motor name='rTorso_Clavicle_x' joint='rTorso_Clavicle_x' gear='110' ctrlrange='-50 50'/>  <!-- 10 -->
+        <motor name='rTorso_Clavicle_y' joint='rTorso_Clavicle_y' gear='110' ctrlrange='-50 50'/>  <!-- 11 -->
+        <motor name='rShoulder_z' joint='rShoulder_z' gear='110' ctrlrange='-50 50'/>  <!-- 12 -->
+        <motor name='rShoulder_x' joint='rShoulder_x' gear='110' ctrlrange='-50 50'/>  <!-- 13 -->
+        <motor name='rShoulder_y' joint='rShoulder_y' gear='110'  ctrlrange='-50 50'/>  <!-- 14 -->
+        <motor name='rElbow' joint='rElbow' gear='100' ctrlrange='-150 150'/>  <!-- 15 -->
+        <motor name='lTorso_Clavicle_z' joint='lTorso_Clavicle_z' gear='110' ctrlrange='-50 50'/>  <!-- 19 -->
+        <motor name='lTorso_Clavicle_x' joint='lTorso_Clavicle_x' gear='110' ctrlrange='-50 50'/>  <!-- 20 -->
+        <motor name='lTorso_Clavicle_y' joint='lTorso_Clavicle_y' gear='110' ctrlrange='-50 50'/>  <!-- 21 -->
+        <motor name='lShoulder_z' joint='lShoulder_z' gear='110' ctrlrange='-50 50'/>  <!-- 22 -->
+        <motor name='lShoulder_x' joint='lShoulder_x' gear='110' ctrlrange='-50 50'/>  <!-- 23 -->
+        <motor name='lShoulder_y' joint='lShoulder_y' gear='110'  ctrlrange='-50 50'/>  <!-- 24 -->
+        <motor name='lElbow' joint='lElbow' gear='100' ctrlrange='-75 75'/>  <!-- 25 -->
+        <motor name='rHip_x' joint='rHip_x' gear='280'  ctrlrange='-100 100'/>  <!-- 29 -->
+        <motor name='rHip_y' joint='rHip_y' gear='280'  ctrlrange='-100 100'/>  <!-- 30 -->
+        <motor name='rHip_z' joint='rHip_z' gear='280'  ctrlrange='-100 100'/>  <!-- 31 -->
+        <motor name='rKnee' joint='rKnee' gear='200'  ctrlrange='-100 100'/>  <!-- 32 -->
+        <motor name='rAnkle_x' joint='rAnkle_x' gear='30' ctrlrange='-50 50'/>  <!-- 33 -->
+        <motor name='rAnkle_z' joint='rAnkle_z' gear='60' ctrlrange='-50 50'/>  <!-- 34 -->
+        <motor name='rAnkle_y' joint='rAnkle_y' gear='30' ctrlrange='-50 50'/>  <!-- 35 -->
+        <motor name='lHip_x' joint='lHip_x' gear='280'  ctrlrange='-100 100'/>  <!-- 37 -->
+        <motor name='lHip_y' joint='lHip_y' gear='280' ctrlrange='-100 100'/>  <!-- 38 -->
+        <motor name='lHip_z' joint='lHip_z' gear='280'  ctrlrange='-100 100'/>  <!-- 39 -->
+        <motor name='lKnee' joint='lKnee' gear='200'  ctrlrange='-100 100'/>  <!-- 40 -->
+        <motor name='lAnkle_x' joint='lAnkle_x' gear='30'  ctrlrange='-50 50'/>  <!-- 41 -->
+        <motor name='lAnkle_z' joint='lAnkle_z' gear='60' ctrlrange='-50 50'/>  <!-- 42 -->
+        <motor name='lAnkle_y' joint='lAnkle_y' gear='30' ctrlrange='-50 50'/>  <!-- 43 -->
+    </actuator>
+    <sensor>
+        <touch name='sensor_head' site='EndSite_head'/>
+        <touch name='sensor_rHand' site='EndSite_rHand'/>
+        <touch name='sensor_lHand' site='EndSite_lHand'/>
+        <touch name='sensor_rToe' site='EndSite_rToe'/>
+        <touch name='sensor_lToe' site='EndSite_lToe'/>
+    </sensor>
+    <worldbody>
+        <geom name='floor' pos='0 0 0' size='200 200 1' zaxis='0 1 0' type='plane' material="MatPlane" condim='3'/>
+        <light mode='targetbodycom' target='pelvis' directional='true' 
+            diffuse='0.8 0.8 0.8' specular='0.1 0.1 0.1' pos='0 4.0 0.0' dir='0 -1 0' castshadow="false"/>
+        <camera name='FixedCamera' pos='-0.8 3 4' fovy='45' mode='fixed' zaxis='-0.5 1.5 2.0'/>
+        <camera name='TargetCamera' pos='-0.8 3 4' fovy='45' mode='trackcom' target='pelvis' zaxis='-0.5 1.5 2.0'/>
+        <body name='pelvis' pos='0 0.931 0'>
+            <freejoint name="RootJoint" />
+            <inertial pos='0 0.931 0' mass="4.032" diaginertia='0.0119 0.0349 0.0297'/>
+            <geom name='Collision_pelvis0' type='sphere' pos='0.085 0.9 0' size='0.06'/>
+            <geom name='Collision_pelvis1' type='sphere' pos='0 0.95 0' size='0.09'/>
+            <geom name='Collision_pelvis2' type='sphere' pos='-0.085 0.9 0' size='0.06'/>
+            <body name='lowerBack' pos='0 1.08 0'>
+                <joint name='pelvis_lowerback_x' type='hinge' axis='1 0 0' range='-120 120' pos='0 1.025 0' damping='5' armature='0.02' /> <!-- 7 -->
+                <joint name='pelvis_lowerback_y'  type='hinge' axis='0 1 0' range='-80 80' pos='0 1.025 0' damping='5' armature='0.02' />  <!-- 8 -->
+                <joint name='pelvis_lowerback_z'  type='hinge' axis='0 0 1' range='-80 80' pos='0 1.025 0' damping='5' armature='0.02' />  <!-- 9 -->
+                <inertial pos='0 1.08 0' mass='5.508' diaginertia='0.0198  0.0545 0.0479'></inertial>
+                <geom name='Collision_lowerBack' type='sphere' pos='0 1.08 0' size='0.07'/>
+                <body name='torso' pos='0 1.2 0'>
+                    <joint name='lowerback_torso_x'  type='hinge' axis='1 0 0' range='-80 80' pos='0.0 1.125 0.0' damping='5' armature='0.02'/> <!-- 10 -->
+                    <joint name='lowerback_torso_y'  type='hinge' axis='0 1 0' range='-80 80' pos='0.0 1.125 0.0' damping='5' armature='0.02'/> <!-- 11 -->
+                    <joint name='lowerback_torso_z'  type='hinge' axis='0 0 1' range='-80 80' pos='0.0 1.125 0.0' damping='5' armature='0.02'/> <!-- 12 -->
+                    <inertial pos='0 1.2 0' mass='6.426' diaginertia='0.0259 0.0636 0.0586'></inertial>
+                    <geom name='Collision_torso' type='sphere' pos='0 1.2 0' size='0.1'/>
+                    <body name='head' pos='0.0 1.48 0.0'>
+                        <joint name='torso_head_x'  type='hinge' axis='1 0 0' range='-80 80' pos='0 1.38 0' />   <!-- 13 -->
+                        <joint name='torso_head_y'  type='hinge' axis='0 1 0' range='-80 80' pos='0 1.38 0' />   <!-- 14 -->
+                        <joint name='torso_head_z'  type='hinge' axis='0 0 1' range='-80 80' pos='0 1.38 0' />   <!-- 15 -->
+                        <geom name='Collision_head' type='capsule' fromto='0.0 1.44 0.0 0.0 1.52 0.0' size='0.09'/>
+                        <!-- geom name='Collision_eye1' type='sphere' pos='0.03 1.54 0.08' size='0.02'/>
+                        <geom name='Collision_eye2' type='sphere' pos='-0.03 1.54 0.08' size='0.02'/>
+                        <geom name='Collision_nose' type='sphere' pos='0.0 1.50 0.08' size='0.02'/ -->
+                        <site name='EndSite_head' pos='0.0 1.6 0.0'/>
+                    </body>
+                    <body name='rClavicle' pos='-0.07 1.2825 0.0'>
+                        <joint name='rTorso_Clavicle_z'  type='hinge' axis='0 0 1' range='-45 45' pos='-0.001 1.2825 0.0' armature='0.0068'/>   <!-- 16 -->
+                        <joint name='rTorso_Clavicle_x'  type='hinge' axis='1 0 0' range='-45 45' pos='-0.001 1.2825 0.0' armature='0.0068'/>   <!-- 17 -->
+                        <joint name='rTorso_Clavicle_y'  type='hinge' axis='0 1 0' range='-45 45' pos='-0.001 1.2825 0.0' armature='0.0068'/>   <!-- 18 -->
+                        <geom name='Collision_rClavicle' type='capsule' fromto='-0.055 1.2825 0.0 -0.085 1.2825 0.0' size='0.065'/>
+                        <body name='rUpperArm' pos='-0.241 1.2825 0.0'>
+                            <joint name='rShoulder_z'  type='hinge' axis='0 0 1' range='-170 170' pos='-0.1186 1.2825 0.0' armature='0.0051'/>   <!-- 19 -->
+                            <joint name='rShoulder_x'  type='hinge' axis='1 0 0' range='-80 80' pos='-0.1186 1.2825 0.0' armature='0.0051'/>   <!-- 20 -->
+                            <joint name='rShoulder_y'  type='hinge' axis='0 1 0' range='-170 170' pos='-0.1186 1.2825 0.0' armature='0.0051'/>   <!-- 21 -->
+                            <geom name='Collision_rUpperArm' type='capsule' fromto='-0.166 1.2825 0.0 -0.316 1.2825 0.0' size='0.0475'/>
+                            <body name='rLowerArm' pos='-0.4786 1.2825 0.0'>
+                                <joint name='rElbow'  type='hinge' axis='0 1 0' range='0 150' pos='-0.3636 1.2825 0.0' armature='0.0028'/>   <!-- 22 -->
+                                <geom name='Collision_rLowerArm' type='capsule' fromto='-0.5486 1.2825 0.0 -0.4086 1.2825 0.0' size='0.045'/>
+                                <geom name='Collision_rHand' pos='-0.63 1.2825 0.0' size='0.04' type='sphere'/>
+                                <site name='EndSite_rHand' pos='-0.67 1.28 0.0'/>
+                            </body>
+                        </body>
+                    </body>
+                    <body name='lClavicle' pos='0.07 1.2825 0.0'>
+                        <joint name='lTorso_Clavicle_z'  type='hinge' axis='0 0 1' range='-45 45' pos='0.001 1.2825 0.0' armature='0.0068'/>  <!-- 27 -->
+                        <joint name='lTorso_Clavicle_x'  type='hinge' axis='1 0 0' range='-45 45' pos='0.001 1.2825 0.0' armature='0.0068'/>   <!-- 28 -->
+                        <joint name='lTorso_Clavicle_y'  type='hinge' axis='0 1 0' range='-45 45' pos='0.001 1.2825 0.0' armature='0.0068'/>   <!-- 29 -->
+                        <geom name='Collision_lClavicle' type='capsule' fromto='0.055 1.2825 0.0 0.085 1.2825 0.0' size='0.065'/>
+                        <body name='lUpperArm' pos='0.241 1.2825 0.0'>
+                            <joint name='lShoulder_z'  type='hinge' axis='0 0 1' range='-170 170' pos='0.1186 1.2825 0.0' armature='0.0051'/>
+                            <joint name='lShoulder_x'  type='hinge' axis='1 0 0' range='-80 170' pos='0.1186 1.2825 0.0' armature='0.0051'/>
+                            <joint name='lShoulder_y'  type='hinge' axis='0 1 0' range='-170 170' pos='0.1186 1.2825 0.0' armature='0.0051'/>
+                            <geom name='Collision_lUpperArm' type='capsule' fromto='0.166 1.2825 0.0 0.316 1.2825 0.0' size='0.0475'/>
+                            <body name='lLowerArm' pos='0.4786 1.2825 0.0'>
+                                <joint name='lElbow'  type='hinge' axis='0 1 0' range='-150 0' pos='0.3636 1.2825 0.0' armature='0.0028'/>
+                                <geom name='Collision_lLowerArm' type='capsule' fromto='0.5486 1.2825 0.0 0.4086 1.2825 0.0' size='0.045'/>
+                                <geom name='Collision_lHand' pos='0.63 1.2825 0.0' size='0.04' type='sphere'/>
+                                <site name='EndSite_lHand' pos='0.67 1.28 0.0'/>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name='rUpperLeg' pos='-0.1 0.675 0'>
+                <joint name='rHip_x'  type='hinge' axis='1 0 0' range='-150 140' pos='-0.1 0.88 0.0' damping='5' armature='0.01'/>
+                <joint name='rHip_y'  type='hinge' axis='0 1 0' range='-80 80' pos='-0.1 0.88 0.0'  damping='5' armature='0.01'/>
+                <joint name='rHip_z'  type='hinge' axis='0 0 1' range='-170 80' pos='-0.1 0.88 0.0'  damping='5' armature='0.01'/>
+                <geom name='Collision_rUpperLeg' type='capsule' fromto='-0.1 0.805 0 -0.1 0.545 0' size='0.07'/>
+                <body name='rLowerLeg' pos='-0.1 0.275 0'>
+                    <joint name='rKnee'  type='hinge' axis='1 0 0' range='0 170' pos='-0.1 0.47 0.0'  armature='0.0060' limited='false'/>
+                    <geom name='Collision_rLowerLeg' type='capsule' fromto='-0.1 0.405 0 -0.1 0.145 0' size='0.06'/>
+                    <body name='rFoot' pos='-0.1 0.042 0.017'>
+                        <joint name='rAnkle_x'  type='hinge' axis='1 0 0' range='-70 90' pos='-0.1 0.08 0.0' armature='0.0008'/>
+                        <joint name='rAnkle_z'  type='hinge' axis='0 0 1' range='-45 45' pos='-0.1 0.08 0.0' armature='0.0008'/>
+                        <joint name='rAnkle_y'  type='hinge' axis='0 -1 0' range='-30 30' pos='-0.1 0.08 0.0' armature='0.0008'/>
+                        <geom name='Collision_rFoot0' type='sphere' pos='-0.1 0.045 -0.0315' size='0.0364'/>
+                        <geom name='Collision_rFoot1' type='sphere' pos='-0.072 0.031 0.111' size='0.021'/>
+                        <geom name='Collision_rFoot2' type='sphere' pos='-0.128 0.031 0.111' size='0.021'/>
+                        <geom name='Collision_rFoot3' type='capsule' fromto='-0.1 0.0504 -0.0152 -0.1 0.0396 0.094' size='0.01638'/>
+                        <!-- body name='rToes' pos='-0.1 0.03 0.165'>
+                            <joint name='rToeJoint'  type='hinge' axis='1 0 0' range='-45.0 10.0' pos='-0.1 0.03 0.13'/>
+                            <geom name='Collision_rToes' type='capsule' fromto='-0.07 0.03 0.165 -0.13 0.03 0.165' size='0.02'/>
+                            <site name='EndSite_rToe' pos='-0.11 0.032 0.19'/>
+                        </body -->
+                        <geom name='Collision_rToes' type='capsule' fromto='-0.07 0.03 0.165 -0.13 0.03 0.165' size='0.02'/>
+                        <!-- geom name="Collision_rFoot0" fromto="-0.14 0.05 -0.033 -0.14 0.032 0.165" size=".027" type="capsule"/>
+                        <geom name="Collision_rFoot1" fromto="-0.07 0.05 -0.033 -0.07 0.032 0.165" size=".027" type="capsule"/ -->
+                        <site name='EndSite_rToe' pos='-0.11 0.032 0.19'/>
+                    </body>
+                </body>
+            </body>
+            <body name='lUpperLeg' pos='0.1 0.675 0'>
+                <joint name='lHip_x'  type='hinge' axis='1 0 0' range='-150 140' pos='0.1 0.88 0.0' damping='5' armature='0.01'/>
+                <joint name='lHip_y'  type='hinge' axis='0 1 0' range='-80 80' pos='0.1 0.88 0.0' damping='5' armature='0.01'/>
+                <joint name='lHip_z'  type='hinge' axis='0 0 1' range='-80 170' pos='0.1 0.88 0.0' damping='5' armature='0.01'/>
+                <geom name='Collision_lUpperLeg' type='capsule' fromto='0.1 0.805 0 0.1 0.545 0' size='0.07'/>
+                <body name='lLowerLeg' pos='0.1 0.275 0'>
+                    <joint name='lKnee'  type='hinge' axis='1 0 0' range='0 170' pos='0.1 0.47 0.0' armature='0.0060' limited='false'/>
+                    <geom name='Collision_lLowerLeg' type='capsule' fromto='0.1 0.405 0 0.1 0.145 0' size='0.06'/>
+                    <body name='lFoot' pos='0.1 0.042 0.017'>
+                        <joint name='lAnkle_x'  type='hinge' axis='1 0 0' range='-70 90' pos='0.1 0.08 0.0' armature='0.0008'/>
+                        <joint name='lAnkle_z'  type='hinge' axis='0 0 1' range='-45 45' pos='0.1 0.08 0.0' armature='0.0008'/>
+                        <joint name='lAnkle_y'  type='hinge' axis='0 -1 0' range='-30 30' pos='0.1 0.08 0.0' armature='0.0008'/>
+                        <geom name='Collision_lFoot0' type='sphere' pos='0.1 0.045 -0.0315' size='0.0364'/>
+                        <geom name='Collision_lFoot1' type='sphere' pos='0.072 0.031 0.111' size='0.021'/>
+                        <geom name='Collision_lFoot2' type='sphere' pos='0.128 0.031 0.111' size='0.021'/>
+                        <geom name='Collision_lFoot3' type='capsule' fromto='0.1 0.0504 -0.0152 0.1 0.0396 0.094' size='0.01638'/>
+                        <!-- body name='lToes' pos='0.1 0.03 0.165'>
+                            <joint name='lToeJoint'  type='hinge' axis='1 0 0' range='-45 10' pos='0.1 0.03 0.13'/>
+                            <geom name='Collision_lToes' type='capsule' fromto='0.07 0.03 0.165 0.13 0.03 0.165' size='0.02'/>
+                            <site name='EndSite_lToe' pos='0.11 0.032 0.19'/>
+                        </body -->
+                        <geom name='Collision_lToes' type='capsule' fromto='0.07 0.03 0.165 0.13 0.03 0.165' size='0.02'/>
+                        <!-- geom name="Collision_lFoot0" fromto="0.14 0.05 -0.033 0.14 0.032 0.165" size=".027" type="capsule"/>
+                        <geom name="Collision_lFoot1" fromto="0.07 0.05 -0.033 0.07 0.032 0.165" size=".027" type="capsule"/ -->
+                        <site name='EndSite_lToe' pos='0.11 0.032 0.19'/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>
